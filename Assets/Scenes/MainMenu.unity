@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685d11a1ffa4661468ad7a74cf9adb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: Assets/Scenes/TestScene.unity
+  startScene: Assets/Scenes/PlayerUI.unity
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
