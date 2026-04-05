@@ -11,19 +11,16 @@ namespace Managers
 
         [Scene] [SerializeField] private string startScene;
 
-        [SerializeField] private GameObject test;
-
+        [SerializeField] private GameObject assignment;
+        
         [Scene] private const string frontScene = "Assets/Scenes/MainGame/FrontView.unity";
         [Scene] private const string windowScene = "Assets/Scenes/MainGame/WindowView.unity";
         [Scene] private const string bookScene = "Assets/Scenes/MainGame/BookView.unity";
         [Scene] private const string backScene = "Assets/Scenes/MainGame/BackView.unity";
 
         private string currentScene = "";
-        
-        private void Start()
-        {
-            ChangeScene(startScene);
-        }
+
+        private void Start() { ChangeScene(startScene); }
 
         private async void ChangeScene(string scene)
         {
@@ -44,6 +41,16 @@ namespace Managers
             catch (Exception _) { print("Error Loading Scene " + scene); }
         }
 
+        // ------------------------------
+        //          Game Set-Up
+        // ------------------------------
+        
+        
+        
+        // ------------------------------
+        //      Navigation Controls
+        // ------------------------------
+        
         public void LeftScene()
         {
             switch (currentScene)
@@ -73,5 +80,7 @@ namespace Managers
                     ChangeScene(frontScene); break;
             }
         }
+
+        public void ToggleAssignment() { assignment.SetActive(!assignment.activeSelf); }
     }
 }
